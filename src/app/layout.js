@@ -5,6 +5,7 @@ import "@/styles/style.scss";
 import "./globals.css";
 import BootstrapClient from "@/components/BootstrapClient";
 import Script from "@/components/Script";
+import NavBar from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,11 +19,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="container">
-        {children}
+            <NavBar />
+          {children}
         </div>
         <BootstrapClient />
         <Script />
-        </body>
+      </body>
     </html>
   );
 }
